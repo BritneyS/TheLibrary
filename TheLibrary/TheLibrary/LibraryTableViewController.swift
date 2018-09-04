@@ -24,8 +24,14 @@
 
 import UIKit
 
+enum Identity : String {
+    case book = "book"
+    
+}
+
 class LibraryTableViewController: UITableViewController {
     
+   // @IBOutlet weak var cellLabel: UILabel!
     
     var bookItems:[Book] = []
     
@@ -58,19 +64,21 @@ class LibraryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return bookItems.count
     }
 
-    /*
+    
+    //draws cells on screen
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let bookData = Identity.book.rawValue
+        let cell = tableView.dequeueReusableCell(withIdentifier: bookData, for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = "\(bookItems[indexPath.row].author): \(bookItems[indexPath.row].title)"
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
