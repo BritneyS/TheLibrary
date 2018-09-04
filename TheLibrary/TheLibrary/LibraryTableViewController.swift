@@ -6,12 +6,41 @@
 //  Copyright © 2018 Britney Smith. All rights reserved.
 //
 
+/*
+ App Homework (due Thursday): The Library
+ 
+ • Build an app that lists the books in a library, including title and
+ author (or the records in a collection, including title and artist, or
+ anything else you like — as long as there are 2 pieces of related
+ data)
+ • Your app should utilize Model-View-Controller architecture
+ • On the main page, your app should list each item in a table view
+ • The user should be able to swipe to delete items
+ • Your app should have a button which allows the user to add items
+ to the list
+ • When your user goes to the Add page, the text field to enter a new
+ item should automatically get focus
+ */
+
 import UIKit
 
 class LibraryTableViewController: UITableViewController {
-
+    
+    
+    var bookItems:[Book] = []
+    
+    func getBooks() {
+        let bookShelf = BookList()
+        
+        for book in bookShelf.books {
+            let newBook = Book(author: book.key, title: book.value)
+            bookItems.append(newBook)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getBooks()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -19,6 +48,7 @@ class LibraryTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,14 +57,9 @@ class LibraryTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return bookItems.count
     }
 
     /*
@@ -91,5 +116,7 @@ class LibraryTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }

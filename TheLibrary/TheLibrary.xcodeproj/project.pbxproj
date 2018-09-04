@@ -12,6 +12,8 @@
 		062FA18A213F1F76000EAC91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 062FA189213F1F76000EAC91 /* Assets.xcassets */; };
 		062FA18D213F1F76000EAC91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 062FA18B213F1F76000EAC91 /* LaunchScreen.storyboard */; };
 		062FA197213F2313000EAC91 /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FA196213F2313000EAC91 /* LibraryTableViewController.swift */; };
+		062FA19B213F26E4000EAC91 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FA19A213F26E4000EAC91 /* BookList.swift */; };
+		062FA19D213F2831000EAC91 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 062FA19C213F2831000EAC91 /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		062FA18C213F1F76000EAC91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		062FA18E213F1F76000EAC91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		062FA196213F2313000EAC91 /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
+		062FA19A213F26E4000EAC91 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
+		062FA19C213F2831000EAC91 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				062FA189213F1F76000EAC91 /* Assets.xcassets */,
 				062FA18B213F1F76000EAC91 /* LaunchScreen.storyboard */,
 				062FA18E213F1F76000EAC91 /* Info.plist */,
+				062FA19A213F26E4000EAC91 /* BookList.swift */,
+				062FA19C213F2831000EAC91 /* Book.swift */,
 			);
 			path = TheLibrary;
 			sourceTree = "<group>";
@@ -135,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062FA19B213F26E4000EAC91 /* BookList.swift in Sources */,
 				062FA197213F2313000EAC91 /* LibraryTableViewController.swift in Sources */,
+				062FA19D213F2831000EAC91 /* Book.swift in Sources */,
 				062FA183213F1F75000EAC91 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
