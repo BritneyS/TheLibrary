@@ -26,7 +26,7 @@ import UIKit
 
 enum Identity : String {
     case book = "book"
-    
+    case add = "addItem"
 }
 
 class LibraryTableViewController: UITableViewController {
@@ -119,15 +119,20 @@ class LibraryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let addItem = Identity.add.rawValue
+        if segue.identifier == addItem { //can add idenfier as enum
+            let controller = segue.destination as! AddItemTableViewController //as : casting object (downcasting), can be nil
+            controller.delegate = self //self as delegate (ChecklistViewController)
+        }
     }
-    */
+    
     
     
 
