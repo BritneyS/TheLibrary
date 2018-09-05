@@ -18,6 +18,11 @@ protocol AddItemTableViewContollerDelegate: class {
 
 class AddItemTableViewController: UITableViewController {
 
+    @IBOutlet weak var addAuthorTextField: UITextField!
+    
+    @IBOutlet weak var addTitleTextField: UITextField!
+    
+    
     weak var delegate: AddItemTableViewContollerDelegate?
     
     override func viewDidLoad() {
@@ -38,8 +43,7 @@ class AddItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -101,5 +105,18 @@ class AddItemTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func cancel() {
+        delegate?.addItemTableViewControllerDidCancel(self)
+    }
+    
+    @IBAction func done() {
+        
+        var book = Book()
+        book.author = addAuthorTextField.text!
+        book.title = addTitleTextField.text!
+        
+        delegate?.addItemTableViewController(self, didFinishAdding: book)
+    }
 
 }

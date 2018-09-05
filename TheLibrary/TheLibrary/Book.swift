@@ -9,6 +9,6 @@
 import Foundation
 
 struct Book {
-    let author:String
-    let title:String
+    var author = ""
+    var title = ""
 }

@@ -29,7 +29,15 @@ enum Identity : String {
     case add = "addItem"
 }
 
-class LibraryTableViewController: UITableViewController {
+class LibraryTableViewController: UITableViewController, AddItemTableViewContollerDelegate {
+    func addItemTableViewControllerDidCancel(_ controller: AddItemTableViewController) {
+        <#code#>
+    }
+    
+    func addItemTableViewController(_ controller: AddItemTableViewController, didFinishAdding item: Book) {
+        <#code#>
+    }
+    
     
    // @IBOutlet weak var cellLabel: UILabel!
     
