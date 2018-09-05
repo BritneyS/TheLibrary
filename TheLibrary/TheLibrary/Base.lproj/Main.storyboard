@@ -44,7 +44,7 @@
             </objects>
             <point key="canvasLocation" x="732" y="156.97151424287858"/>
         </scene>
-        <!--Add Item Table View Controller-->
+        <!--Add Book-->
         <scene sceneID="bQp-OW-gaR">
             <objects>
                 <tableViewController id="2XS-wt-ZnA" customClass="AddItemTableViewController" customModule="TheLibrary" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,6 +87,10 @@
                             <outlet property="delegate" destination="2XS-wt-ZnA" id="nlq-II-hFs"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Add Book" largeTitleDisplayMode="never" id="UtD-kn-Im0">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uq2-XA-O4z"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="H0s-JJ-hbp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="addAuthorTextField" destination="h1d-Jz-gok" id="I02-af-Dwi"/>
                         <outlet property="addTitleTextField" destination="8fL-7G-VLx" id="OZy-YV-b2G"/>
