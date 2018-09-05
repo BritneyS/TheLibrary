@@ -35,7 +35,7 @@
                     <navigationItem key="navigationItem" id="EKC-bv-dhR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7hm-4X-mtb">
                             <connections>
-                                <segue destination="2XS-wt-ZnA" kind="show" id="vVj-6j-DRe"/>
+                                <segue destination="2XS-wt-ZnA" kind="show" identifier="addItem" id="vVj-6j-DRe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,7 +47,7 @@
         <!--Add Item Table View Controller-->
         <scene sceneID="bQp-OW-gaR">
             <objects>
-                <tableViewController id="2XS-wt-ZnA" customClass="AddItemTableViewController" customModule="TheLibrary" sceneMemberID="viewController">
+                <tableViewController id="2XS-wt-ZnA" customClass="AddItemTableViewController" customModule="TheLibrary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="OYO-eu-yET">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

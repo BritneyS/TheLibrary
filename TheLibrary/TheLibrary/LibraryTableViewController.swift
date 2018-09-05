@@ -31,11 +31,11 @@ enum Identity : String {
 
 class LibraryTableViewController: UITableViewController, AddItemTableViewContollerDelegate {
     func addItemTableViewControllerDidCancel(_ controller: AddItemTableViewController) {
-        <#code#>
+        navigationController?.popViewController(animated: true)
     }
     
     func addItemTableViewController(_ controller: AddItemTableViewController, didFinishAdding item: Book) {
-        <#code#>
+        navigationController?.popViewController(animated: true)
     }
     
     
