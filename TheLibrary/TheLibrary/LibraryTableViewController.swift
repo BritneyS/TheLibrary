@@ -129,7 +129,7 @@ class LibraryTableViewController: UITableViewController {
         let addItem = Identity.add.rawValue
         if segue.identifier == addItem { //can add idenfier as enum
             let controller = segue.destination as! AddItemTableViewController //as : casting object (downcasting), can be nil
-            controller.delegate = self //self as delegate (ChecklistViewController)
+            controller.delegate = self //self as delegate 
         }
     }
     

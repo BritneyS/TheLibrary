@@ -8,8 +8,18 @@
 
 import UIKit
 
+// required methods for AddItemVewController in protocol
+protocol AddItemTableViewContollerDelegate: class {
+    
+    func addItemTableViewControllerDidCancel(_ controller: AddItemTableViewController)
+    
+    func addItemTableViewController(_ controller: AddItemTableViewController, didFinishAdding item: Book) //passes Book
+}
+
 class AddItemTableViewController: UITableViewController {
 
+    weak var delegate: AddItemTableViewContollerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
