@@ -30,6 +30,8 @@ enum Identity : String {
 }
 
 class LibraryTableViewController: UITableViewController, AddItemTableViewContollerDelegate {
+    
+    
     func addItemTableViewControllerDidCancel(_ controller: AddItemTableViewController) {
         navigationController?.popViewController(animated: true)
     }
@@ -44,6 +46,7 @@ class LibraryTableViewController: UITableViewController, AddItemTableViewContoll
         let indexPath = IndexPath(row: newRowIndex, section: 0)
         let indexPaths = [indexPath] // new array of IndexPaths, put in 'indexPath'
         tableView.insertRows(at: indexPaths, with: .automatic) // insert row in indexPaths array, even though there's just one here
+        
         navigationController?.popViewController(animated: true)
     }
     

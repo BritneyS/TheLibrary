@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="zTp-G1-Vru" id="dDj-21-v2a"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="EKC-bv-dhR">
+                    <navigationItem key="navigationItem" title="The Library" id="EKC-bv-dhR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7hm-4X-mtb">
                             <connections>
                                 <segue destination="2XS-wt-ZnA" kind="show" identifier="addItem" id="vVj-6j-DRe"/>
@@ -102,6 +102,7 @@
                     <connections>
                         <outlet property="addAuthorTextField" destination="h1d-Jz-gok" id="I02-af-Dwi"/>
                         <outlet property="addTitleTextField" destination="8fL-7G-VLx" id="OZy-YV-b2G"/>
+                        <outlet property="doneBarButton" destination="H0s-JJ-hbp" id="nv5-Jy-RId"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WIv-Dv-d29" userLabel="First Responder" sceneMemberID="firstResponder"/>
