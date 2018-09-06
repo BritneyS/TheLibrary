@@ -35,6 +35,15 @@ class LibraryTableViewController: UITableViewController, AddItemTableViewContoll
     }
     
     func addItemTableViewController(_ controller: AddItemTableViewController, didFinishAdding item: Book) {
+        //navigationController?.popViewController(animated: true)
+        
+        let newRowIndex = bookItems.count
+        bookItems.append(item)
+        
+        //set indexPath to IndexPath of a new row (IndexPath objectpoints to a row in a table), knows how to find new row in the table
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        let indexPaths = [indexPath] // new array of IndexPaths, put in 'indexPath'
+        tableView.insertRows(at: indexPaths, with: .automatic) // insert row in indexPaths array, even though there's just one here
         navigationController?.popViewController(animated: true)
     }
     
@@ -55,7 +64,7 @@ class LibraryTableViewController: UITableViewController, AddItemTableViewContoll
     override func viewDidLoad() {
         super.viewDidLoad()
         getBooks()
-
+        navigationController?.navigationBar.prefersLargeTitles = true //large titles,  checklistviewcontroller lives inside nav controller
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -111,21 +120,6 @@ class LibraryTableViewController: UITableViewController, AddItemTableViewContoll
         bookItems.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     
     // MARK: - Navigation
